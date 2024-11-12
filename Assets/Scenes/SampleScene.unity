@@ -1668,6 +1668,7 @@ Transform:
   m_Children:
   - {fileID: 963194228}
   - {fileID: 878657283}
+  - {fileID: 1933573867}
   m_Father: {fileID: 1222791585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &540067430
@@ -3470,6 +3471,7 @@ GameObject:
   - component: {fileID: 1222791593}
   - component: {fileID: 1222791595}
   - component: {fileID: 1222791594}
+  - component: {fileID: 1222791596}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -3665,6 +3667,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0bc2b2cc-433a-4ef1-a613-1b1918ff9387
     m_ActionName: Player/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1222791596}
+        m_TargetAssemblyTypeName: RangedAttack, Assembly-CSharp
+        m_MethodName: OnSkill
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 20dc6ac3-6571-4256-9597-77dbefea3451
+    m_ActionName: Player/Skill[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -3686,7 +3704,7 @@ MonoBehaviour:
   jumpPower: 80
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   cameraContainer: {fileID: 418380758}
   minXLook: -85
   maxXLook: 85
@@ -3739,7 +3757,7 @@ MonoBehaviour:
   maxCheckDistance: 3
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   curInteractGameObject: {fileID: 0}
   promptText: {fileID: 198265531}
 --- !u!114 &1222791593
@@ -3872,6 +3890,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4dcd8f2dc477f5e4aa277ee503048ee8, type: 3}
   footstepThreshold: 0.3
   footstepRate: 0.5
+--- !u!114 &1222791596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222791584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f68b7ff99426e419a15c15b66a1e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3306741826193849691, guid: fd38c2f9087ef6043b1fee99f0c6771d, type: 3}
+  straight: {fileID: 1530993086}
+  parabola: {fileID: 1530993087}
+  circle: {fileID: 1530993088}
 --- !u!1 &1278526726
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,6 +4797,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517533021}
   m_CullTransparentMesh: 1
+--- !u!1 &1530993085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530993089}
+  - component: {fileID: 1530993088}
+  - component: {fileID: 1530993087}
+  - component: {fileID: 1530993086}
+  m_Layer: 0
+  m_Name: Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1530993086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530993085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d5c35bc152d2b4a9e59c7d7bffa72d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPoint: {fileID: 1933573867}
+--- !u!114 &1530993087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530993085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e247cce33b7f943b2c892ff32daa53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1530993088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530993085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddf2d617c22a5e469f1998833663b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1530993089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530993085}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1548404045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6052,6 +6157,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3765244950167136977, guid: 9e5f19571126ea44fa7c1940f9e6f376, type: 3}
   m_PrefabInstance: {fileID: 1876043785}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1933573866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1933573867}
+  m_Layer: 6
+  m_Name: Skill point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1933573867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933573866}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.30000007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 418380758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1939979462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9112,3 +9248,4 @@ SceneRoots:
   - {fileID: 1350596478}
   - {fileID: 1278526727}
   - {fileID: 1786701486}
+  - {fileID: 1530993089}

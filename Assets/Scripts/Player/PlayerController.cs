@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public Transform cameraContainer;
     public float minXLook;
     public float maxXLook;
-    private float camCurXRot;
+    public float camCurXRot;
     public float lookSensitivity;
     private Vector2 mouseDelta;
     public bool canLook = true;
