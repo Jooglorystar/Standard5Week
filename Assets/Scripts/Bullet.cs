@@ -4,7 +4,7 @@ public class Bullet : MonoBehaviour
 {
     void Start()
     {
-        Invoke("DestroyBullet", 10f);
+        Invoke("DestroyBullet", 5f);
     }
 
     void DestroyBullet()

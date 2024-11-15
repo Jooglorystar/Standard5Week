@@ -4855,6 +4855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddf2d617c22a5e469f1998833663b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillPoint: {fileID: 0}
+  bulletCount: 10
 --- !u!4 &1530993089
 Transform:
   m_ObjectHideFlags: 0
