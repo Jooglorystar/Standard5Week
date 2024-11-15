@@ -18,7 +18,7 @@ public class RangedAttack : MonoBehaviour
     {
         if(context.started)
         {
-            ShootAttack(circle);
+            ShootAttack(straight);
         }
     }
 

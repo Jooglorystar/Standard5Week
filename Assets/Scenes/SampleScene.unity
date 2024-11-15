@@ -3926,7 +3926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1278526727
 Transform:
   m_ObjectHideFlags: 0
@@ -4855,7 +4855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddf2d617c22a5e469f1998833663b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillPoint: {fileID: 0}
+  skillPoint: {fileID: 1933573867}
   bulletCount: 10
 --- !u!4 &1530993089
 Transform:

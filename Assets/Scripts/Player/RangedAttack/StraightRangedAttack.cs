@@ -6,8 +6,9 @@ public class StraightRangedAttack : RangedAttacks
     {
         GameObject bullet = Instantiate(prefab);
 
-        bullet.transform.position = skillPoint.position;
+        bullet.transform.position = skillPoint.position + (skillPoint.forward);
+        bullet.transform.LookAt(skillPoint.position);
 
-        bullet.GetComponent<Rigidbody>().velocity = CharacterManager.Instance.Player.transform.forward * bulletSpeed;
+        bullet.GetComponent<Rigidbody>().velocity = -bullet.transform.forward * bulletSpeed;
     }
 }
